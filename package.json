@@ -1,0 +1,55 @@
+{
+  "name": "@drunk-pixels/utils",
+  "version": "1.0.0",
+  "description": "A utility repo for commonly used code in game based projects.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redballoon/utils-games.git"
+  },
+  "author": "redballoon",
+  "keywords": [
+    "utility",
+    "utils",
+    "javascript",
+    "games"
+  ],
+  "bugs": {
+    "url": "https://github.com/redballoon/utils-games/issues"
+  },
+  "homepage": "https://github.com/redballoon/utils-games#readme",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/deck-storage/*"
+  ],
+  "scripts": {
+    "test": "npx jest",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "execute-file": "./node_modules/@babel/node/bin/babel-node.js --presets @babel/preset-env"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "modules": "false",
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "jest": "^25.1.0"
+  }
+}

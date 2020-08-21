@@ -102,3 +102,16 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+#################################
+# CUSTOM
+#################################
+
+# because this is a yarn project, but is created with npm link on dev projects
+package-lock.json
+
+
+
+
+.DS_Store
